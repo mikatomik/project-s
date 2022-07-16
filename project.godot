@@ -12,6 +12,7 @@ config_version=4
 
 config/name="project-s"
 config/description="PC-First Splatoon gameplay, Public Domain"
+run/main_scene="res://assets/maps/misc/dev_plane/DevPlane.tscn"
 config/icon="res://icon.png"
 
 [display]
