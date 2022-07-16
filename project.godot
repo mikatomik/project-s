@@ -11,7 +11,14 @@ config_version=4
 [application]
 
 config/name="project-s"
+config/description="PC-First Splatoon gameplay, Public Domain"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/resizable=false
 
 [physics]
 
