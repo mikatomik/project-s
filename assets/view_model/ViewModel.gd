@@ -46,10 +46,20 @@ func _physics_process(delta):
 	# Move character.  Param 4 (true) means stop on slopes
 	velocity = character.move_and_slide_with_snap(velocity, snap, Vector3.UP, true)
 	
+	# Update character look direction to face towards aiming if firing
+	if Input.is_action_pressed("fire"):
+		character.look_angle = spring_arm.rotation.y
+		character.weapon_pitch = -spring_arm.rotation.x
 	# Update character look direction if moved
-	if move_direction.length() > 0.2:
+	elif move_direction.length() > 0.2:
 		var look_direction = Vector2(-velocity.z, -velocity.x)
-		character.rotation.y = look_direction.angle()
+		character.look_angle = look_direction.angle()
+		character.weapon_pitch = 0
+	else:
+		character.weapon_pitch = 0
+	
+	# Handle extra player inputs
+	character.is_firing = Input.is_action_pressed("fire")
 
 func _unhandled_input(event):
 	# Implement mouse aim direction

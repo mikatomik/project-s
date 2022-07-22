@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/weapons/goo_gun/gun_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/weapons/goo_gun/tank_material.tres" type="Material" id=2]
+[ext_resource path="res://assets/weapons/goo_gun/GooGun.gd" type="Script" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 material = ExtResource( 1 )
@@ -23,6 +24,7 @@ bottom_radius = 0.088
 height = 0.429
 
 [node name="GooGun" type="Spatial"]
+script = ExtResource( 3 )
 
 [node name="Body" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
