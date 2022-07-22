@@ -1,9 +1,9 @@
 extends Spatial
 
 export var is_firing = false
-export var fire_rate = 0.1
+export var fire_rate = 0.075
 export var projectile_spread = 0 #TODO
-export var projectile_scalar = 25
+export var projectile_scalar = 40
 export var look_angle = 0
 export var weapon_pitch = 0
 
